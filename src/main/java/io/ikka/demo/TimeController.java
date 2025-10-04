@@ -15,7 +15,7 @@ public class TimeController {
     public Map<String, String> getCurrentTime() {
         LocalDateTime now = LocalDateTime.now();
         Map<String, String> response = new HashMap<>();
-        response.put("serverTime", now.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
+        response.put("serverTime", now.format(DateTimeFormatter.ISO_OFFSET_DATE_TIME));
         response.put("timestamp", String.valueOf(System.currentTimeMillis()));
         return response;
     }
